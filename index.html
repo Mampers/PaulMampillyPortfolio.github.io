@@ -1,129 +1,235 @@
 <!DOCTYPE HTML>
 <!--
 	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html> 
-	<head> 
+<html>
+	<head>
 		<title>Paul Mampilly's Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<style>
+			#intro p {
+				text-transform: none;
+				letter-spacing: normal;
+				font-weight: 400;
+				max-width: 60rem;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			#intro h2 {
+				margin-top: 0.75rem;
+				margin-bottom: 0.75rem;
+			}
+
+			/* ✅ Perfect alignment for the two cards in .posts */
+			.posts {
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			.posts article {
+				display: flex;
+				flex-direction: column;
+			}
+
+			/* ✅ Force both images to the same height */
+			.posts article .image.fit {
+				height: 260px; /* adjust if you want taller */
+				overflow: hidden;
+			}
+
+			/* ✅ Make images fill consistently */
+			.posts article .image.fit img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center;
+				display: block;
+			}
+
+			/* ✅ Keep titles consistent so cards don't misalign */
+			.posts article header h2 {
+				min-height: 4.5rem; /* tweak if needed */
+			}
+
+			/* ✅ Push buttons to the bottom so they align */
+			.posts article .actions.special {
+				margin-top: auto;
+			}
+		</style>
 	</head>
+
 	<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+		<div id="wrapper" class="fade-in">
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Paul Mampilly's Portfolio</h1>
-						<p>Data Analyst Adept in SQL, Excel, Tableau.
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+			<!-- Intro -->
+			<div id="intro">
+				<h1>Paul Mampilly's Portfolio</h1>
+				<h2>Senior Power BI Developer</h2>
+
+				<p>
+					Designing scalable Power BI semantic models and executive dashboards built on robust SQL Server
+					data warehouse architecture. Specialising in DAX optimisation, star schema modelling,
+					KPI frameworks, and transforming complex operational data into clear, decision-ready insights.
+				</p>
+
+				<ul class="actions">
+					<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+				</ul>
+			</div>
+
+			<header id="header">
+				<a href="index.html" class="logo">Projects</a>
+			</header>
+
+			<nav id="nav">
+				<ul class="links">
+					<li class="active"><a href="index.html">Projects</a></li>
+				</ul>
+				<ul class="icons">
+					<li>
+						<a href="https://www.linkedin.com/in/paul-mampilly/" class="icon brands alt fa-linkedin">
+							<span class="label">LinkedIn</span>
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/Mampers/PortfolioProject" class="icon brands alt fa-github">
+							<span class="label">GitHub</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+			<!-- Main -->
+			<div id="main">
+
+				<!-- Palthanio Restaurant Analytics -->
+				<article class="post featured">
+					<header class="major">
+						<h2>
+							<a href="https://github.com/Mampers/Palthanio-restaurant-analytics">
+								Palthanio Restaurant Analytics
+							</a>
+						</h2>
+						<p>
+							End-to-end restaurant analytics solution using SQL Server Medallion Architecture
+							(Bronze, Silver, Gold) and Power BI semantic modelling.
+							Includes star schema design, financial KPI framework, DAX optimisation,
+							and executive-level dashboards.
+						</p>
+					</header>
+
+					<a href="https://github.com/Mampers/Palthanio-restaurant-analytics" class="image main">
+						<img src="images/Palthanio Restaurant Photo.png" alt="Palthanio Restaurant Analytics Project" />
+					</a>
+
+					<ul class="actions special">
+						<li>
+							<a href="https://github.com/Mampers/Palthanio-restaurant-analytics" class="button large">
+								View Project
+							</a>
+						</li>
+					</ul>
+				</article>
+
+				<!-- Nashville SQL Cleaning -->
+				<article class="post featured">
+					<header class="major">
+						<h2>
+							<a href="https://github.com/Mampers/PortfolioProject/blob/main/Nashville%20Housing%20Project">
+								SQL Data Cleaning
+							</a>
+						</h2>
+						<p>Data cleaning and transformation project using SQL Server.</p>
+					</header>
+
+					<a href="https://github.com/Mampers/PortfolioProject/blob/main/Nashville%20Housing%20Project" class="image main">
+						<img src="images/Nashville Housing.jpeg" alt="Nashville Housing SQL Project" />
+					</a>
+
+					<ul class="actions special">
+						<li>
+							<a href="https://github.com/Mampers/PortfolioProject/blob/main/Nashville%20Housing%20Project" class="button large">
+								View Project
+							</a>
+						</li>
+					</ul>
+				</article>
+
+				<!-- Other Projects -->
+				<section class="posts">
+
+					<!-- Data Exploration in SQL -->
+					<article>
+						<header>
+							<h2>
+								<a href="https://github.com/Mampers/PortfolioProject/blob/main/Alex%20Protfolio%20%201SQLQuery1%20V2.sql">
+									Data Exploration in SQL
+								</a>
+							</h2>
+						</header>
+
+						<a href="https://github.com/Mampers/PortfolioProject/blob/main/Alex%20Protfolio%20%201SQLQuery1%20V2.sql" class="image fit">
+							<img src="images/Covid 19.jpeg" alt="COVID-19 Data Exploration" />
+						</a>
+
+						<p>Exploratory data analysis of COVID-19 using SQL Server.</p>
+
+						<ul class="actions special">
+							<li>
+								<a href="https://github.com/Mampers/PortfolioProject/blob/main/Alex%20Protfolio%20%201SQLQuery1%20V2.sql" class="button">
+									View Project
+								</a>
+							</li>
 						</ul>
-					</div>
+					</article>
 
-				
+					<!-- Power BI Portfolio Projects -->
+					<article>
+						<header>
+							<h2>
+								<a href="https://github.com/Mampers/PortfolioProject">
+									Power BI Portfolio Projects
+								</a>
+							</h2>
+						</header>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Projects</a></li>
+						<a href="https://github.com/Mampers/PortfolioProject" class="image fit">
+							<img src="images/Power BI Icon.png" alt="Power BI Portfolio" />
+						</a>
+
+						<p>
+							Cross-industry Power BI dashboards demonstrating strong data modelling,
+							DAX capability, and clear, insight-led reporting design.
+						</p>
+
+						<ul class="actions special">
+							<li>
+								<a href="https://github.com/Mampers/PortfolioProject" class="button">
+									View Portfolio
+								</a>
+							</li>
 						</ul>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/paul-mampilly/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="https://github.com/Mampers/PortfolioProject" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+					</article>
 
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<h2><a href="https://github.com/Mampers/PortfolioProject/blob/main/Nashville%20Housing%20Project">SQL Data Cleaning<br /></h2>
-									<p>This project, I cleaned data in SQL Server </p>
-								</header>
-								<a href="https://github.com/Mampers/PortfolioProject/blob/main/Nashville%20Housing%20Project" class="image main"><img src="images/Nashville Housing.jpeg" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="https://github.com/Mampers/PortfolioProject/blob/main/Nashville%20Housing%20Project" class="button large">View project</a></li>
-								</ul>
-							</article>
-
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<h2><a href="https://github.com/Mampers/PortfolioProject/blob/main/Alex%20Protfolio%20%201SQLQuery1%20V2.sql">Data Exploration in SQL<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/Mampers/PortfolioProject/blob/main/Alex%20Protfolio%20%201SQLQuery1%20V2.sql" class="image fit"><img src="images/Covid 19.jpeg" alt="" /></a>
-									<p>Data Exploration of COVID-19 in SQL Server</Datag></p>
-									<ul class="actions special">
-										<li><a href="https://github.com/Mampers/PortfolioProject/blob/main/Alex%20Protfolio%20%201SQLQuery1%20V2.sql" class="button">View project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="https://public.tableau.com/app/profile/paul.mampilly">Tableau Data Viz<br /></a></h2>
-									</header>
-									<a href="https://public.tableau.com/app/profile/paul.mampilly" class="image fit"><img src="images/tableau-logo-tableau-software.jpg" alt="" /></a>
-									<p>This shows my data visualisation skills in Tableau.</p>
-									<ul class="actions special">
-										<li><a href="https://public.tableau.com/app/profile/paul.mampilly" class="button">View Project</a></li>
-									</ul>
-								</article>
-							</section>
+				</section>
 
 			</div>
 
-				<!-- Footer -->
-				<footer id="footer">
-					<section>
-						<form method="post" action="#">
-							<div class="fields">
-								<div class="field">
-									<label for="name">Name: Paul Mampilly</label>
-								</div>
-								<div class="field">
-									<label for="email">Email: pmampilly1984@gmail.com</label>
-								</div>
-							<ul class="actions">
-							</ul>
-						</form>
-					</section>
-					<section class="split contact">
-						<section class="alt">
-							<h3>Location</h3>
-							<p>Basildon, Essex<br /></p>
-						</section>
-						<section>
-							<h3>Social</h3>
-							<ul class="icons alt">
-								<li><a href="https://www.linkedin.com/in/paul-mampilly/" class="icon brands alt fa-linkedin"><span class="label">Instagram</span></a></li>
-								<li><a href="https://github.com/Mampers/PortfolioProject/blob/main/Nashville%20Housing%20Project" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-							</ul>
-						</section>
-					</section>
-				</footer>
+		</div>
 
-			<!-- Copyright -->
-				<div id="copyright">
-					<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
